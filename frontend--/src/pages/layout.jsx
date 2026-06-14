@@ -86,7 +86,7 @@ const Layout = () => {
             </div>
             {sidebarOpen && (
               <div className="flex flex-col">
-                <span className="font-bold text-sm tracking-tight text-white">EPG ÉCOLE</span>
+                <span className="font-bold text-sm tracking-tight text-white">Edu Manage</span>
                 <span className="text-[8px] font-medium tracking-wider uppercase text-sky-400">
                   Plateforme Scolaire
                 </span>
