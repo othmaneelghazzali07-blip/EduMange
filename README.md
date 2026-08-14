@@ -298,7 +298,6 @@ EduManage is built using modern web technologies following a scalable client-ser
 ## Development Tools
 
 * **Réalisé par :** Othmane EL GHAZZALI
-* **Encadré par :** M. Asmae YAOULA
 - Visual Studio Code
 - Git
 - GitHub
