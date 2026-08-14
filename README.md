@@ -1,161 +1,347 @@
-# 🎓 EduMange — Gestion de la Vie Scolaire
+# 🎓 EduMange - Gestion de la Vie Scolaire
+<div align="center">
 
-![EduMange Logo](screenshots/logo.jpeg)
+**Projet de Fin d'Études (PFE)** présenté en vue de l'obtention du diplôme de :
+**Technicien Spécialisé en Développement Digital - Option : Web Full Stack**
+# 🎓 EduManage
 
-**EduMange** is a full-stack web application designed to centralize and simplify the management of school life.
+* **Établissement :** OFPPT - ISTA Hay Al Adarissa Fès
+* **Année Scolaire :** 2024 - 2025
+### Modern School Management System
 
-The platform provides dedicated interfaces for **Administrators, Teachers, and Students**, allowing each role to manage and access the information relevant to them.
+A modern Full-Stack School Management Platform built with **React**, **Laravel REST API**, and **MySQL**, designed to simplify academic and administrative management through dedicated workspaces for administrators, teachers, and students.
 
-This project was developed as a **Projet de Fin d'Études (PFE)** as part of the **Technicien Spécialisé en Développement Digital – Option Web Full Stack** program.
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![Laravel](https://img.shields.io/badge/Laravel-Backend-FF2D20?logo=laravel)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql)
+![REST API](https://img.shields.io/badge/API-REST-success)
+![Redux Toolkit](https://img.shields.io/badge/Redux-Toolkit-764ABC?logo=redux)
+![RTK Query](https://img.shields.io/badge/RTK-Query-593D88)
+![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-7952B3?logo=bootstrap)
+![Laravel Sanctum](https://img.shields.io/badge/Auth-Sanctum-red)
 
----
-
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [User Roles](#-user-roles)
-- [Technologies](#-technologies)
-- [Project Architecture](#-project-architecture)
-- [Application Screenshots](#-application-screenshots)
-- [Installation](#-installation)
-- [Environment Configuration](#-environment-configuration)
-- [Running the Project](#-running-the-project)
-- [API](#-api)
-- [Security](#-security)
-- [Project Structure](#-project-structure)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
+</div>
 
 ---
 
-## 🚀 Overview
+## 📖 Overview
 
-EduMange is a school management platform developed to facilitate the management of academic and administrative activities.
+EduManage is a comprehensive school management platform developed to digitize and simplify educational administration.
 
-The application brings together the main actors of a school environment in a single platform:
+The application centralizes daily academic operations through a secure role-based system, allowing administrators, teachers, and students to access dedicated dashboards tailored to their responsibilities.
 
-- 👨‍💼 Administrators
-- 👨‍🏫 Teachers
-- 🎓 Students
-
-The system allows administrators to manage users, classes, subjects and schedules, while teachers can manage grades and attendance and students can consult their academic information.
+Built using a modern **React + Laravel REST API** architecture, the project emphasizes scalability, maintainability, security, and user experience while following software engineering best practices. The authentication layer relies on Laravel Sanctum with Bearer Token authentication, and the frontend communicates with the backend through RTK Query.
 
 ---
 
-## ✨ Features
+![Login](screenshots/login.png)
 
-### 🔐 Authentication & Authorization
+---
 
-- Secure user authentication
-- Role-based access control
-- Protected routes
-- Dedicated interfaces according to user role
+## 🎯 Objectives
 
-### 👨‍💼 Administrator
+The main objectives of EduManage are:
 
-Administrators can manage the main resources of the school:
+- Digitalize school administration.
+- Simplify communication between school actors.
+- Improve student academic monitoring.
+- Centralize educational resources.
+- Automate repetitive administrative tasks.
+- Provide real-time statistics and dashboards.
+- Ensure secure access through role-based authentication.
 
-- 📚 Classes
-- 👨‍🏫 Teachers
-- 🎓 Students
-- 📖 Subjects
-- 🗓️ Sessions
-- 🏫 Rooms
-- 📝 Grades
-- 📊 Attendance
-- 🔔 Notifications
+# ✨ Features
 
-### 👨‍🏫 Teacher
+EduManage provides a complete digital ecosystem that simplifies the daily management of educational institutions by offering dedicated workspaces for each type of user.
+
+---
+
+# 👨‍💼 Administrator Features
+
+The administrator has full control over the entire platform.
+
+### Dashboard
+
+- Global Statistics
+- Total Students
+- Total Teachers
+- Total Classes
+- Today's Schedule
+- Active Classes Overview
+
+![Admin Dashboard](screenshots/AdminDashboard.png)
+
+---
+
+### Student Management
+
+The administrator can:
+
+- Add new students
+- Update student information
+- Delete student records
+- Search students
+- View student details
+- Assign students to classes
+
+![Student Management](screenshots/gestion-etudiant.png)
+
+---
+
+### Teacher Management
+
+Features include:
+
+- Add teachers
+- Edit teacher information
+- Delete teachers
+- Assign teachers to classes
+- Manage teaching subjects
+
+![Teacher Management](screenshots/gestion-enseignant.png)
+
+---
+
+### Class Management
+
+The administrator can:
+
+- Create classes
+- Update class information
+- Assign students
+- Assign teachers
+- Manage classrooms
+
+![Class Management](screenshots/gestion-classe.png)
+
+---
+
+### Subject Management
+
+- Create subjects
+- Edit subjects
+- Delete subjects
+- Assign teachers to subjects
+
+---
+
+### Timetable Management
+
+The scheduling module allows administrators to:
+
+- Create weekly schedules
+- Update schedules
+- Delete sessions
+- Filter schedules by date
+- Organize classes efficiently
+
+![Timetable Management](screenshots/emploi-enseignant.png)
+
+---
+
+# 👨‍🏫 Teacher Features
+
+Teachers have their own dedicated workspace for managing academic activities.
+
+---
+
+### Teacher Dashboard
+
+The dashboard provides quick access to:
+
+- Assigned classes
+- Today's schedule
+- Academic overview
+
+![Teacher Dashboard](screenshots/dasboard-enseignant.png)
+
+---
+
+### Grade Management
 
 Teachers can:
 
-- View their dashboard
-- Consult their timetable
-- Manage grades
-- Manage student attendance
-- Access classes and subjects assigned to them
+- Select a class
+- Select a subject
+- Enter grades
+- Update grades
+- Calculate averages automatically
 
-### 🎓 Student
-
-Students can:
-
-- Access their personal dashboard
-- View their timetable
-- Consult their grades
-- View their absences
-- Access their academic information
+![Grade Management](screenshots/gestion-notes.png)
 
 ---
 
-# 👥 User Roles
+### Attendance Management
 
-| Role | Main Responsibilities |
-|------|------------------------|
-| 👨‍💼 Admin | Manage users, classes, subjects, rooms, schedules, grades and attendance |
-| 👨‍🏫 Teacher | Manage grades, attendance and teaching schedule |
-| 🎓 Student | Consult grades, attendance and timetable |
+The attendance system allows teachers to:
+
+- Mark students as Present
+- Mark students as Absent
+- Mark students as Late
+- View attendance statistics instantly
+
+![Attendance Management](screenshots/gestion-absences.png)
 
 ---
 
-# 🛠️ Technologies
+### Weekly Schedule
+
+Teachers can consult their personalized weekly timetable.
+
+![Teacher Weekly Schedule](screenshots/emploi-enseignant.png)
+
+---
+
+# 👨‍🎓 Student Features
+
+Students have read-only access to their academic information.
+
+---
+
+### Student Dashboard
+
+Students can view:
+
+- Attendance Summary
+- Behavior Score
+- Today's Schedule
+- Academic Overview
+
+![Student Dashboard](screenshots/dashboard-etudiant.png)
+
+---
+
+### Grades
+
+Students can consult:
+
+- Individual Subjects
+- Continuous Assessments
+- Average Grades
+- Global Average
+
+![Student Grades](screenshots/relvet-notes.png)
+
+---
+
+### Timetable
+
+Students can access their weekly class schedule.
+
+![Student Timetable](screenshots/emploi-etudiant.png)
+
+---
+
+# 🔐 Authentication & Security
+
+EduManage implements secure authentication using Laravel Sanctum.
+
+Security Features:
+
+- Role-Based Access Control (RBAC)
+- Protected API Routes
+- Bearer Token Authentication
+- Session Management
+- Secure Login
+- Protected Resources
+- Unauthorized Access Prevention
+
+---
+
+# ⚡ API Communication
+
+The frontend communicates with the backend using RESTful APIs.
+
+Main characteristics:
+
+- REST Architecture
+- JSON Responses
+- RTK Query Integration
+- Axios HTTP Client
+- Secure Bearer Token Authentication
+- Optimized Data Fetching
+- Automatic Cache Management
+
+# 🛠 Technology Stack
+
+EduManage is built using modern web technologies following a scalable client-server architecture.
+
+---
 
 ## Frontend
 
-- ⚛️ React.js
-- ⚡ Vite
-- 🎨 CSS
-- 📦 Bootstrap
-- 🔄 Redux Toolkit
-- 🔌 RTK Query
-- 🌐 Axios
-
-## Backend
-
-- 🐘 Laravel
-- 🐘 PHP
-- 🔗 REST API
-- 🔐 Laravel Sanctum
-- 🗄️ Eloquent ORM
-
-## Database
-
-- 🐬 MySQL
-- Database migrations
-- Seeders
-- Relational data modeling
-
-## Development Tools
-
-- Git
-- GitHub
-- Postman
-- Visual Studio Code
-- npm
-- Composer
+| Technology | Purpose |
+|------------|---------|
+| React.js | User Interface |
+| React Router | Client-side Routing |
+| Redux Toolkit | State Management |
+| RTK Query | API Communication |
+| Axios | HTTP Requests |
+| Bootstrap | Responsive UI |
+| JavaScript (ES6+) | Frontend Logic |
 
 ---
 
-# 🏗️ Project Architecture
+## Backend
 
-EduMange follows a **separated frontend/backend architecture**.
+| Technology | Purpose |
+|------------|---------|
+| Laravel | REST API |
+| Laravel Sanctum | Authentication |
+| Eloquent ORM | Database Management |
+| PHP | Backend Language |
+
+---
+
+## Database
+
+| Technology | Purpose |
+|------------|---------|
+| MySQL | Relational Database |
+
+---
+
+## 👥 Équipe du Projet
+## Development Tools
+
+* **Réalisé par :** Othmane EL GHAZZALI
+* **Encadré par :** M. Asmae YAOULA
+- Visual Studio Code
+- Git
+- GitHub
+- Postman
+- Composer
+- npm
+
+---
+
+## 🔑 Comptes de Test (Scénario de Démonstration)
+# 🏗 System Architecture
+
+Voici les identifiants de test pour découvrir les différents espaces et rôles de la plateforme (**Réalisation & Démonstration**) :
+**password** :password
+
+EduManage follows a modern **Three-Tier Architecture**.
+
+### 👤 1. Administration
+* **Rôle :** Admin
+* **Email :** `admin@epg.ma`
 
 ```text
-                    ┌──────────────────────┐
-                    │      React.js        │
-                    │      Frontend        │
-                    └──────────┬───────────┘
-                               │
-                               │ HTTP / REST API
-                               ▼
-                    ┌──────────────────────┐
-                    │       Laravel        │
-                    │       Backend        │
-                    └──────────┬───────────┘
-                               │
-                               │ Eloquent ORM
-                               ▼
-                    ┌──────────────────────┐
-                    │        MySQL         │
-                    │       Database       │
-                    └──────────────────────┘
++------------------------------------------------+
+|                React Frontend                  |
+|  Components • Redux • RTK Query • Bootstrap    |
++------------------------------------------------+
+                    │
+                    │ REST API
+                    ▼
++------------------------------------------------+
+|               Laravel Backend                  |
+| Controllers • Services • Models • Sanctum      |
++------------------------------------------------+
+                    │
+                    │ Eloquent ORM
+                    ▼
++------------------------------------------------+
+|                 MySQL Database                 |
++------------------------------------------------+
