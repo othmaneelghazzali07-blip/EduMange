@@ -104,7 +104,7 @@ const EmploiEtudiant = () => {
   return (
     <div className="space-y-4 animate-in fade-in duration-700">
 
-      {/* الهيدر */}
+      {/*  */}
       <div className="flex items-center justify-between bg-[#002f56] p-4 rounded-2xl shadow-lg border-b-4 border-[#f39200]">
         <div className="flex items-center gap-4">
           <h1 className="text-xl font-black text-white uppercase italic tracking-tighter m-0">
@@ -120,7 +120,7 @@ const EmploiEtudiant = () => {
         </p>
       </div>
 
-      {/* التنقل بين الأسابيع */}
+      {/*    */}
       <div className="flex items-center justify-between bg-white border border-slate-200 rounded-2xl px-4 py-3 shadow-sm">
         <button
           onClick={() => setWeekOffset(w => w - 1)}
@@ -224,7 +224,7 @@ const EmploiEtudiant = () => {
 
       <div className="text-center">
         <p className="text-[8px] font-bold text-slate-400 uppercase tracking-[0.4em]">
-          Optimisé pour l'affichage EPG
+          Optimisé pour l'affichage 
         </p>
       </div>
 

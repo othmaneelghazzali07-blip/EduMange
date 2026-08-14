@@ -362,7 +362,7 @@ public function ajouterClasseEnseignant(Request $request, $utilisateurId)
 
                 $enseignant = null;
                 if ($pivot && $pivot->enseignant_id) {
-                    $ens = \App\Models\Enseignant::with('utilisateur')
+                    $ens =Enseignant::with('utilisateur')
                         ->where('utilisateur_id', $pivot->enseignant_id)
                         ->first();
                     if ($ens) {
@@ -589,10 +589,10 @@ public function modifierEnseignantMatiere(Request $request, $classeId)
             ->where('matiere_id', (int)$request->matiere_id)
             ->update(['enseignant_id' => (int)$request->enseignant_id]);
 
-        // ✅ حدث الحصص المستقبلية أو كلها لنفس القسم والمادة
+
         Seance::where('classe_id', $classeId)
             ->where('matiere_id', $request->matiere_id)
-            ->where('date', '>=', now()->toDateString()) // المستقبلية فقط
+            ->where('date', '>=', now()->toDateString())
             ->update(['utilisateur_id' => (int)$request->enseignant_id]);
 
         return response()->json(['success' => true]);
@@ -671,7 +671,7 @@ public function AjouteSeance(Request $request)
         'heure_fin'      => 'required',
     ]);
 
-    // ✅ شرط أوقات العمل
+    // condition temp de travaille
     if ($request->heure_debut < '08:00' || $request->heure_fin > '18:30') {
         return response()->json([
             'success' => false,
@@ -679,7 +679,7 @@ public function AjouteSeance(Request $request)
         ], 422);
     }
 
-    // ✅ شرط هeure_fin > heure_debut
+    // ✅heure_fin > heure_debut
     if ($request->heure_debut >= $request->heure_fin) {
         return response()->json([
             'success' => false,

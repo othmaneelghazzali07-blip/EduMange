@@ -54,13 +54,13 @@ const Login = () => {
 
       {/* --- Section : Logo et En-tête --- */}
 <div className="text-center mb-">
-  {/* الحاوية الخارجية (الزرقاء) كتبقى بنفس حجمها الأصلي w-20 h-20 */}
+
   <div className="inline-flex items-center justify-center w-30 h-30 bg-[#1a3a6b] rounded-2xl shadow-lg mb-4 border-b-4 border-[#1a3a6b]">
     
-    {/* الحاوية البيضاء: نقصنا الـ Padding من p-3 إلى p-1 باش نخليو مساحة للشعار يكبر */}
+
     <div className="bg-white p-1 rounded-2xl shadow-lg w-full h-full flex items-center justify-center">
       
-      {/* الشعار: كبرناه من h-12 w-12 إلى h-16 w-16 باش يعمر المربع ويبان كبير وواضح دائماً */}
+  
       <img 
         src="/logo.png" 
         className="h-40 w-40 object-contain" 

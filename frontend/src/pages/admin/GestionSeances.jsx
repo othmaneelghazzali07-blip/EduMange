@@ -79,14 +79,14 @@ const GestionSeances = () => {
   const listeClasses = useMemo(() => reponseClasses?.classes || [], [reponseClasses]);
   const listeSalles  = useMemo(() => reponseSalles?.data     || [], [reponseSalles]);
 
-  // ── القسم والمادة المختارة ──
+
   const classeSelectionnee = useMemo(() =>
     listeClasses.find(c => String(c.id) === String(formulaire.classe_id))
   , [listeClasses, formulaire.classe_id]);
 
   const matieresDisponibles = classeSelectionnee?.matieres || [];
 
-  // ── الأستاذ أوتوماتيك من المادة المختارة ──
+ 
   const matiereSelectionnee = useMemo(() =>
     matieresDisponibles.find(m => String(m.id) === String(formulaire.matiere_id))
   , [matieresDisponibles, formulaire.matiere_id]);

@@ -165,12 +165,12 @@ public function getBulletinEtudiant()
             return response()->json(['status' => 'error', 'message' => 'Classe non assignée'], 404);
         }
 
-        // ✅ جيب غير المواد المرتبطة بقسم الطالب عبر الـ seances
+        // relation seance
         $matieres = Matiere::whereHas('seances', function($q) use ($etudiant) {
             $q->where('classe_id', $etudiant->classe_id);
         })->get();
 
-        // ✅ إلا ماكانش seances، جيب المواد عبر علاقة القسم مباشرة
+        // relation class 
         if ($matieres->isEmpty()) {
             $matieres = Matiere::whereHas('classes', function($q) use ($etudiant) {
                 $q->where('classes.id', $etudiant->classe_id);

@@ -118,13 +118,13 @@ const EtudiantsList = ({ classeId, matiereId }) => {
   const [modal, setModal]       = useState(null);
   const [confirmDel, setConfirmDel] = useState(null);
 
-  // ✅ يهندل array أو object (keyBy) اللي يرجعو من الـ backend
+  // object backend
   const toArray = (notes) => {
     if (!notes) return [];
     return Array.isArray(notes) ? notes : Object.values(notes);
   };
 
-  // ✅ يجيب النقطة بـ type_examen و matiere_id
+  // type_examen و matiere_id
   const getNoteByType = (notes, type) => {
     const arr = toArray(notes);
     return arr.find(
@@ -132,7 +132,7 @@ const EtudiantsList = ({ classeId, matiereId }) => {
     ) ?? null;
   };
 
-  // ✅ يحسب المعدل إلى كانت 3 نقاط
+  // 
   const calculateMoyenne = (notes) => {
     const arr = toArray(notes).filter(n => Number(n.matiere_id) === Number(matiereId));
     if (arr.length < 3) return null;
