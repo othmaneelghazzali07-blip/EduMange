@@ -1,13 +1,6 @@
-# 🎓 EduMange - Gestion de la Vie Scolaire
+# 🎓 EduMange - Modern School Management System
 <div align="center">
 
-**Projet de Fin d'Études (PFE)** présenté en vue de l'obtention du diplôme de :
-**Technicien Spécialisé en Développement Digital - Option : Web Full Stack**
-# 🎓 EduManage
-
-* **Établissement :** OFPPT - ISTA Hay Al Adarissa Fès
-* **Année Scolaire :** 2024 - 2025
-### Modern School Management System
 
 A modern Full-Stack School Management Platform built with **React**, **Laravel REST API**, and **MySQL**, designed to simplify academic and administrative management through dedicated workspaces for administrators, teachers, and students.
 
