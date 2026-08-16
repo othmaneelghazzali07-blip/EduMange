@@ -128,7 +128,7 @@ The scheduling module allows administrators to:
 - Filter schedules by date
 - Organize classes efficiently
 
-![Timetable Management](screenshots/emploi-seances.png)
+![Timetable Management](screenshots/gestion-seances.png)
 
 ---
 
