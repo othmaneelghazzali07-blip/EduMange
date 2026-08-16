@@ -91,7 +91,7 @@ Features include:
 - Assign teachers to classes
 - Manage teaching subjects
 
-![Teacher Management](screenshots/gestion-enseignant.png)
+![Teacher Management](screenshots/gestion-classe.png)
 
 ---
 
