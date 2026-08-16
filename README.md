@@ -91,7 +91,7 @@ Features include:
 - Assign teachers to classes
 - Manage teaching subjects
 
-![Teacher Management](screenshots/gestion-classe.png)
+![Teacher Management](screenshots/gestion-enseignant.png)
 
 ---
 
@@ -128,7 +128,7 @@ The scheduling module allows administrators to:
 - Filter schedules by date
 - Organize classes efficiently
 
-![Timetable Management](screenshots/emploi-enseignant.png)
+![Timetable Management](screenshots/emploi-seances.png)
 
 ---
 
